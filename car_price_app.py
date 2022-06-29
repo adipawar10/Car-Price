@@ -5,7 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 @st.cache()
-#streamlit.set_page_config(page_title ="Car Predictor", page_icon ="random", layout = 'centered', initial_sidebar_state = 'auto')
+st.set_page_config(page_title ="Car Predictor", page_icon ="random", layout = 'centered', initial_sidebar_state = 'auto')
 def load_data():
 		cars_df=pd.read_csv("car-prices.csv")
 		car_companies = pd.Series([car.split(" ")[0] for car in cars_df['CarName']], index = cars_df.index)
